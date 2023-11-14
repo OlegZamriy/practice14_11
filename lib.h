@@ -1,15 +1,13 @@
 #ifndef LIB_H
 #define LIB_H
 
-class MathOperations {
-public:
-    static int findMin(int x, int y);
-    static int findMax(int x, int y);
-    static int square(int x);
-    static double power(int x, int n);
-    static bool isEven(int x);
-    static bool isOdd(int x);
-};
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define SQUARE(x) ((x) * (x))
+#define POWER(base, exp) pow((base), (exp))
+#define IS_EVEN(num) ((num) % 2 == 0)
+#define IS_ODD(num) ((num) % 2 != 0)
 
 #endif  
+
 

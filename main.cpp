@@ -4,49 +4,42 @@
 using namespace std;
 
 int main() {
-    int num1, num2, choice;
-
-    cout << "Enter the first number: ";
+    int num1, num2;
+    cout << "Enter the first integer: ";
     cin >> num1;
 
-    cout << "Enter the second number: ";
+    cout << "Enter the second integer: ";
     cin >> num2;
 
-    cout << "Choose an operation:\n";
-    cout << "1. Find Min\n";
-    cout << "2. Find Max\n";
-    cout << "3. Square\n";
-    cout << "4. Power\n";
-    cout << "5. Check Even\n";
-    cout << "6. Check Odd\n";
-    cout << "Enter your choice: ";
+    cout << "1. Minimum of two numbers\n";
+    cout << "2. Maximum of two numbers\n";
+    cout << "3. Square of the first number\n";
+    cout << "4. Power of the first number to the second\n";
+    cout << "5. Check the first number for evenness\n";
+    cout << "6. Check the second number for oddness\n";
+    cout << "Choose an operation (1-6): ";
+
+    int choice;
     cin >> choice;
 
     switch (choice) {
     case 1:
-        cout << "Min: " << MathOperations::findMin(num1, num2) << "\n";
+        cout << "Minimum of " << num1 << " and " << num2 << ": " << MIN(num1, num2) << endl;
         break;
     case 2:
-        cout << "Max: " << MathOperations::findMax(num1, num2) << "\n";
+        cout << "Maximum of " << num1 << " and " << num2 << ": " << MAX(num1, num2) << endl;
         break;
     case 3:
-        cout << "Square of " << num1 << ": " << MathOperations::square(num1) << "\n";
-        cout << "Square of " << num2 << ": " << MathOperations::square(num2) << "\n";
+        cout << "Square of " << num1 << ": " << SQUARE(num1) << endl;
         break;
     case 4:
-        int exponent;
-        cout << "Enter the exponent: ";
-        cin >> exponent;
-        cout << "Power of " << num1 << ": " << MathOperations::power(num1, exponent) << "\n";
-        cout << "Power of " << num2 << ": " << MathOperations::power(num2, exponent) << "\n";
+        cout << num1 << " raised to the power of " << num2 << ": " << POWER(num1, num2) << endl;
         break;
     case 5:
-        cout << num1 << " is " << (MathOperations::isEven(num1) ? "even" : "odd") << "\n";
-        cout << num2 << " is " << (MathOperations::isEven(num2) ? "even" : "odd") << "\n";
+        cout << num1 << " is even: " << IS_EVEN(num1) << endl;
         break;
     case 6:
-        cout << num1 << " is " << (MathOperations::isOdd(num1) ? "odd" : "even") << "\n";
-        cout << num2 << " is " << (MathOperations::isOdd(num2) ? "odd" : "even") << "\n";
+        cout << num2 << " is odd: " << IS_ODD(num2) << endl;
         break;
     default:
         cout << "Invalid choice\n";
